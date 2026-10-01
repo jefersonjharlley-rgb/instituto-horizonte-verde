@@ -27,8 +27,7 @@ export function obterDadosProjetos() {
         const titulo =
             projeto.querySelector("h3");
 
-        const descricao =
-            projeto.querySelector("p");
+        const descricao = projeto.querySelector("p:not(.etiqueta)");
 
         const itens =
             projeto.querySelectorAll("li");
