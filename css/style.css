@@ -1246,3 +1246,148 @@ h2 {
     padding: var(--espaco-3);
   }
 }
+
+/* =========================================================
+   MODO DE ALTO CONTRASTE
+   ========================================================= */
+
+body.alto-contraste {
+  --verde-escuro: #000000;
+  --verde: #ffffff;
+  --verde-claro: #000000;
+  --fundo: #000000;
+  --texto: #ffffff;
+  --muted: #ffffff;
+  --borda: #ffffff;
+  --branco: #000000;
+}
+
+/* =========================================================
+   AJUSTES ESPECÍFICOS DO ALTO CONTRASTE
+   ========================================================= */
+
+body.alto-contraste .hero,
+body.alto-contraste .pagina-intro {
+  background: #000000;
+  color: #ffffff;
+}
+
+body.alto-contraste .sobretitulo,
+body.alto-contraste .etiqueta {
+  color: #ffffff;
+}
+
+body.alto-contraste .fundo-claro {
+  background: #000000;
+}
+
+body.alto-contraste .botao {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #000000;
+}
+
+body.alto-contraste .botao:hover,
+body.alto-contraste .botao:focus-visible {
+  background: #000000;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+body.alto-contraste .rodape {
+  background: #000000;
+  color: #ffffff;
+}
+
+body.alto-contraste input,
+body.alto-contraste select,
+body.alto-contraste fieldset {
+  background: #000000;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+body.alto-contraste legend {
+  color: #ffffff;
+}
+
+body.alto-contraste .chamada {
+  background: #000000;
+  border: 1px solid #ffffff;
+}
+
+body.alto-contraste .rodape a {
+  color: #ffffff;
+}
+
+body.alto-contraste .rodape a:hover,
+body.alto-contraste .rodape a:focus-visible {
+  color: #000000;
+  background: #ffffff;
+}
+
+body.alto-contraste .cabecalho {
+  background: #000000;
+}
+
+body.alto-contraste .marca {
+  color: #ffffff;
+}
+
+body.alto-contraste .menu a,
+body.alto-contraste .submenu-toggle,
+body.alto-contraste .menu-toggle {
+  color: #ffffff;
+}
+
+body.alto-contraste .submenu {
+  background: #000000;
+  border-color: #ffffff;
+}
+
+body.alto-contraste .submenu a:hover,
+body.alto-contraste .menu a:hover,
+body.alto-contraste .submenu-toggle:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+/* =========================================================
+   BOTÃO DE MODO ESCURO
+   ========================================================= */
+
+.contraste-toggle {
+  background: var(--verde-escuro);
+  color: var(--branco);
+  border: 2px solid var(--verde-escuro);
+  border-radius: 999px;
+  padding: 0.6rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.contraste-toggle:hover {
+  background: var(--verde);
+  border-color: var(--verde);
+  color: var(--branco);
+}
+
+.contraste-toggle:focus-visible {
+  outline: 3px solid #e89b27;
+  outline-offset: 3px;
+}
+
+/* Quando o modo escuro estiver ativo */
+
+body.alto-contraste .contraste-toggle {
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+body.alto-contraste .contraste-toggle:hover {
+  background: #000000;
+  color: #ffffff;
+  border-color: #ffffff;
+}

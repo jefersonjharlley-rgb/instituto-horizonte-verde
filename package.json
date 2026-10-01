@@ -1,0 +1,27 @@
+{
+  "name": "ong",
+  "version": "1.0.0",
+  "description": "O Instituto Horizonte Verde é um projeto acadêmico de desenvolvimento web criado para apresentar uma organização não governamental, seus projetos e uma forma de demonstrar interesse em participar das ações.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jefersonjharlley-rgb/instituto-horizonte-verde.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jefersonjharlley-rgb/instituto-horizonte-verde/issues"
+  },
+  "homepage": "https://github.com/jefersonjharlley-rgb/instituto-horizonte-verde#readme",
+  "devDependencies": {
+    "sharp": "^0.35.5",
+    "vite": "^8.3.2"
+  }
+}
