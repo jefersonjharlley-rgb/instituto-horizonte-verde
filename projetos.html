@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Instituto Horizonte Verde.">
+    <title>Instituto Horizonte Verde</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/script.js"></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#conteudo-principal">
+        Pular para o conteúdo principal
+    </a>
+
+    <!-- Cabeçalho e menu de navegação -->
+    <header class="cabecalho">
+        <div class="container cabecalho-conteudo">
+            <a class="marca" href="index.html" aria-label="Instituto Horizonte Verde — página inicial">
+                <img src="img/logo-horizonte-verde.png" alt="Logo do Instituto Horizonte Verde">
+            </a>
+            <nav class="navegacao" aria-label="Navegação principal">
+
+                <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+                    <span class="icone-hamburguer" aria-hidden="true">☰</span>
+                    <span class="texto-menu">Menu</span>
+                </button>
+                <ul id="menu-principal" class="menu">
+                    <li>
+                        <a href="index.html">Início</a>
+                    </li>
+                    <li class="item-dropdown">
+                        <button class="submenu-toggle" type="button" aria-expanded="false"
+                            aria-controls="submenu-projetos">
+                            Projetos
+                            <span aria-hidden="true">▾</span>
+                        </button>
+                        <ul id="submenu-projetos" class="submenu">
+                            <li>
+                                <a href="projetos.html#sementes">
+                                    Sementes do Amanhã
+                                </a>
+                            </li>
+                            <li>
+                                <a href="projetos.html#praca">
+                                    Praça Viva
+                                </a>
+                            </li>
+                            <li>
+                                <a href="projetos.html#reuso">
+                                    Rede de Reuso
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="cadastro.html">Participe</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="conteudo-principal">
+        <!-- Introdução da página -->
+        <section class="pagina-intro" aria-labelledby="titulo-principal">
+            <div class="container">
+                <p class="sobretitulo">Iniciativas</p>
+                <h1 id="titulo-principal">
+                    Projetos que florescem com a comunidade
+                </h1>
+                <p>
+                    Essas iniciativas foram criadas com o objetivo de educar, conscientizar e unir as pessoas em prol da
+                    preservação do meio ambiente.
+                </p>
+            </div>
+        </section>
+
+        <!-- Lista de iniciativas -->
+        <section class="secao container" aria-labelledby="lista-projetos">
+            <h2 id="lista-projetos" class="visualmente-oculto">
+                Lista de projetos
+            </h2>
+            <div class="lista-projetos">
+                <article id="sementes" class="projeto">
+                    <p class="etiqueta">Educação</p>
+                    <h3>Sementes do Amanhã</h3>
+                    <p>
+                        Oficinas para estudantes sobre reciclagem, consumo responsável e
+                        hortas escolares.
+                    </p>
+                    <ul>
+                        <li>Encontros quinzenais nas escolas parceiras;</li>
+                        <li>materiais reaproveitados nas atividades;</li>
+                        <li>participação de educadores e voluntários.</li>
+                    </ul>
+                </article>
+                <article id="praca" class="projeto">
+                    <p class="etiqueta">Território</p>
+                    <h3>Praça Viva</h3>
+                    <p>
+                        Mutirões de revitalização de praças para criar espaços de
+                        convivência mais seguros e acolhedores.
+                    </p>
+                    <ul>
+                        <li>Plantio de espécies adequadas ao local;</li>
+                        <li>limpeza e pintura colaborativa;</li>
+                        <li>escuta das necessidades dos moradores.</li>
+                    </ul>
+                </article>
+                <article id="reuso" class="projeto">
+                    <p class="etiqueta">Solidariedade</p>
+                    <h3>Rede de Reuso</h3>
+                    <p>
+                        Campanha de arrecadação e redistribuição de itens em bom estado
+                        para famílias da comunidade.
+                    </p>
+                    <ul>
+                        <li>Pontos de coleta em parceiros locais;</li>
+                        <li>triagem feita por voluntários;</li>
+                        <li>encaminhamento responsável das doações.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- Convite para cadastro -->
+        <section class="secao fundo-claro" aria-labelledby="convite-titulo">
+            <div class="container chamada">
+                <div>
+                    <h2 id="convite-titulo">
+                        Quer colaborar com uma dessas iniciativas?
+                    </h2>
+                    <p>Conte-nos como você deseja participar.</p>
+                </div>
+
+                <a class="botao" href="cadastro.html">Fazer cadastro</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Informações finais -->
+    <footer class="rodape">
+        <div class="container rodape-conteudo">
+            <div>
+                <p class="marca">
+                    <span aria-hidden="true">🌿</span>
+                    Horizonte Verde
+                </p>
+                <p>Projeto acadêmico — dados fictícios.</p>
+            </div>
+            <address>
+                Contato:
+                <a href="mailto:contato@horizonteverde.org">
+                    contato@horizonteverde.org
+                </a>
+            </address>
+        </div>
+    </footer>
+</body>
+
+</html>

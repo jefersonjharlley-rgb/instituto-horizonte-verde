@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulário de participação do Instituto Horizonte Verde.">
+    <title>Participe | Instituto Horizonte Verde</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/script.js"></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#conteudo-principal">
+        Pular para o conteúdo principal
+    </a>
+
+    <!-- Cabeçalho e menu de navegação -->
+    <header class="cabecalho">
+        <div class="container cabecalho-conteudo">
+            <a class="marca" href="index.html" aria-label="Instituto Horizonte Verde — página inicial">
+                <img src="img/logo-horizonte-verde.png" alt="Logo do Instituto Horizonte Verde">
+            </a>
+            <nav class="navegacao" aria-label="Navegação principal">
+                <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+                    <span class="icone-hamburguer" aria-hidden="true">☰</span>
+                    <span class="texto-menu">Menu</span>
+                </button>
+                <ul id="menu-principal" class="menu">
+                    <li>
+                        <a href="index.html">Início</a>
+                    </li>
+                    <li class="item-dropdown">
+                        <button class="submenu-toggle" type="button" aria-expanded="false"
+                            aria-controls="submenu-projetos">
+                            Projetos
+                            <span aria-hidden="true">▾</span>
+                        </button>
+                        <ul id="submenu-projetos" class="submenu">
+                            <li>
+                                <a href="projetos.html#sementes">
+                                    Sementes do Amanhã
+                                </a>
+                            </li>
+                            <li>
+                                <a href="projetos.html#praca">
+                                    Praça Viva
+                                </a>
+                            </li>
+                            <li>
+                                <a href="projetos.html#reuso">
+                                    Rede de Reuso
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="cadastro.html">Participe</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo-principal">
+        <!-- Introdução da página -->
+        <section class="pagina-intro" aria-labelledby="titulo-principal">
+            <div class="container">
+                <p class="sobretitulo">Cadastro demonstrativo</p>
+                <h1 id="titulo-principal">Venha fazer parte da mudança</h1>
+                <p>
+                    Preencha os dados abaixo para indicar seu interesse. Nenhuma
+                    informação será enviada, pois este é um formulário acadêmico.
+                </p>
+            </div>
+        </section>
+
+        <!-- Formulário de engajamento -->
+        <section class="secao container" aria-labelledby="formulario-titulo">
+            <div class="formulario-intro">
+                <h2 id="formulario-titulo">Dados de participação</h2>
+                <p>
+                    Os campos marcados com <span aria-hidden="true">*</span> são
+                    obrigatórios.
+                </p>
+            </div>
+
+            <form id="formulario-cadastro" novalidate>
+                <fieldset>
+                    <legend>Dados pessoais</legend>
+
+                    <div class="grade-formulario">
+                        <div class="campo campo-largo">
+                            <label for="nome">
+                                Nome completo <span aria-hidden="true">*</span>
+                            </label>
+                            <input id="nome" name="nome" type="text" autocomplete="name" required minlength="3">
+                        </div>
+                        <div class="campo">
+                            <label for="email">
+                                E-mail <span aria-hidden="true">*</span>
+                            </label>
+                            <input id="email" name="email" type="email" autocomplete="email" required>
+                        </div>
+                        <div class="campo">
+                            <label for="cpf">
+                                CPF <span aria-hidden="true">*</span>
+                            </label>
+                            <input id="cpf" name="cpf" type="text" inputmode="numeric" autocomplete="off" required
+                                pattern="[0-9]{3}[.][0-9]{3}[.][0-9]{3}-[0-9]{2}" maxlength="14"
+                                placeholder="000.000.000-00" aria-describedby="ajuda-cpf">
+                            <small id="ajuda-cpf">Digite os 11 números do CPF.</small>
+                        </div>
+                        <div class="campo">
+                            <label for="telefone">
+                                Telefone <span aria-hidden="true">*</span>
+                            </label>
+                            <input id="telefone" name="telefone" type="tel" inputmode="numeric" autocomplete="tel"
+                                required pattern="\(\d{2}\) \d{4,5}-\d{4}" maxlength="15" placeholder="(00) 00000-0000">
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Endereço</legend>
+
+                    <div class="grade-formulario">
+                        <div class="campo">
+                            <label for="cep">
+                                CEP <span aria-hidden="true">*</span>
+                            </label>
+                            <input id="cep" name="cep" type="text" inputmode="numeric" autocomplete="postal-code"
+                                required pattern="[0-9]{5}-[0-9]{3}" maxlength="9" placeholder="00000-000"
+                                aria-describedby="mensagem-cep">
+                            <p id="mensagem-cep" class="mensagem-cep" role="status" aria-live="polite"></p>
+                        </div>
+                        <div class="campo campo-largo">
+                            <label for="endereco">
+                                Endereço <span aria-hidden="true">*</span>
+                            </label>
+                            <input id="endereco" name="endereco" type="text" autocomplete="address-line1" required>
+                        </div>
+                        <div class="campo">
+                            <label for="numero">
+                                Número <span aria-hidden="true">*</span>
+                            </label>
+                            <input id="numero" name="numero" type="text" inputmode="numeric" required>
+                        </div>
+                        <div class="campo">
+                            <label for="cidade">
+                                Cidade <span aria-hidden="true">*</span>
+                            </label>
+                            <input id="cidade" name="cidade" type="text" autocomplete="address-level2" required>
+                        </div>
+                        <div class="campo">
+                            <label for="estado">
+                                Estado <span aria-hidden="true">*</span>
+                            </label>
+                            <select id="estado" name="estado" autocomplete="address-level1" required>
+                                <option value="">Selecione</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        Como deseja participar? <span aria-hidden="true">*</span>
+                    </legend>
+
+                    <div class="opcoes" role="radiogroup" aria-required="true">
+                        <label>
+                            <input type="radio" name="participacao" value="voluntario" required>
+                            Quero ser voluntário(a)
+                        </label>
+                        <label>
+                            <input type="radio" name="participacao" value="doador">
+                            Quero ser doador(a)
+                        </label>
+                        <label>
+                            <input type="radio" name="participacao" value="parceiro">
+                            Quero ser parceiro(a)
+                        </label>
+                    </div>
+                </fieldset>
+                <div class="campo-checkbox">
+                    <label>
+                        <input id="termos" name="termos" type="checkbox" required>
+                        Li e concordo que este é um cadastro demonstrativo para atividade
+                        acadêmica. <span aria-hidden="true">*</span>
+                    </label>
+                </div>
+                <button class="botao" type="submit">Enviar cadastro</button>
+                <p id="mensagem-formulario" class="mensagem-formulario" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <!-- Informações finais -->
+    <footer class="rodape">
+        <div class="container rodape-conteudo">
+            <div>
+                <p class="marca">
+                    <span aria-hidden="true">🌿</span>
+                    Horizonte Verde
+                </p>
+                <p>Projeto acadêmico — dados fictícios.</p>
+            </div>
+
+            <address>
+                Contato:
+                <a href="mailto:contato@horizonteverde.org">
+                    contato@horizonteverde.org
+                </a>
+            </address>
+        </div>
+    </footer>
+</body>
+
+</html>

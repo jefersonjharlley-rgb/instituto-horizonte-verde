@@ -1,0 +1,1248 @@
+/* =========================================================
+
+   DESIGN SYSTEM
+
+   Instituto Horizonte Verde
+
+   ========================================================= */
+
+:root {
+  /* =========================
+
+     CORES
+
+     ========================= */
+
+  --verde-escuro: #124734;
+
+  --verde: #237554;
+
+  --verde-claro: #dcefe5;
+
+  --fundo: #fcfdfb;
+
+  --texto: #1e2a24;
+
+  --muted: #52645a;
+
+  --borda: #bdd2c5;
+
+  --branco: #ffffff;
+
+  --sombra: 0 8px 24px rgb(18 71 52 / 10%);
+
+  /* =========================
+
+     TIPOGRAFIA
+
+     ========================= */
+
+  --fonte-xs: 0.8rem;
+
+  --fonte-sm: 0.93rem;
+
+  --fonte-base: 1rem;
+
+  --fonte-lg: 1.1rem;
+
+  --fonte-xl: 1.25rem;
+
+  --fonte-2xl: clamp(1.65rem, 3vw, 2.45rem);
+
+  --fonte-3xl: clamp(2.2rem, 5vw, 4.1rem);
+
+  /* =========================
+
+     ESPAÇAMENTOS
+
+     Escala modular baseada
+
+     em 0.25rem
+
+     ========================= */
+
+  --espaco-1: 0.25rem;
+
+  --espaco-2: 0.5rem;
+
+  --espaco-3: 0.75rem;
+
+  --espaco-4: 1rem;
+
+  --espaco-5: 1.25rem;
+
+  --espaco-6: 1.5rem;
+
+  --espaco-8: 2rem;
+
+  --espaco-12: 3rem;
+
+  --espaco-16: 4rem;
+
+  --espaco-18: 4.5rem;
+
+  --espaco-22: 5.5rem;
+}
+
+/* =========================================================
+
+   RESET E CONFIGURAÇÕES GERAIS
+
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background: var(--fundo);
+
+  color: var(--texto);
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: var(--fonte-base);
+
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid #e89b27;
+
+  outline-offset: 3px;
+}
+
+/* =========================================================
+
+   ACESSIBILIDADE
+
+   ========================================================= */
+
+.skip-link {
+  position: fixed;
+
+  top: 0;
+
+  left: 0.8rem;
+
+  z-index: 10;
+
+  padding: var(--espaco-3) var(--espaco-4);
+
+  transform: translateY(-120%);
+
+  background: var(--branco);
+
+  color: var(--verde-escuro);
+
+  font-weight: bold;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.visualmente-oculto {
+  position: absolute;
+
+  width: 1px;
+
+  height: 1px;
+
+  padding: 0;
+
+  margin: -1px;
+
+  overflow: hidden;
+
+  clip: rect(0, 0, 0, 0);
+
+  white-space: nowrap;
+
+  border: 0;
+}
+
+/* =========================================================
+
+   CABEÇALHO E NAVEGAÇÃO
+
+   ========================================================= */
+
+.cabecalho {
+  background: var(--branco);
+
+  border-bottom: 1px solid var(--borda);
+}
+
+.cabecalho-conteudo {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: var(--espaco-6);
+
+  min-height: 4.7rem;
+}
+
+.marca {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: var(--espaco-2);
+
+  color: var(--verde-escuro);
+
+  font-size: var(--fonte-xl);
+
+  font-weight: 800;
+
+  text-decoration: none;
+}
+
+.marca img {
+  width: 500px;
+
+  height: auto;
+
+  display: block;
+}
+
+/* =========================================================
+
+   CONTAINER
+
+   ========================================================= */
+
+.container {
+  width: min(1120px, calc(100% - 2rem));
+
+  margin-inline: auto;
+}
+
+/* =========================================================
+
+   HERO E INTRODUÇÃO DAS PÁGINAS
+
+   ========================================================= */
+
+.hero,
+.pagina-intro {
+  background: linear-gradient(135deg, var(--verde-escuro), #216345);
+
+  color: var(--branco);
+}
+
+.hero-conteudo {
+  max-width: 780px;
+
+  padding-block: var(--espaco-22);
+}
+
+.pagina-intro .container {
+  max-width: 840px;
+
+  padding-block: var(--espaco-16);
+
+  margin-left: max(1rem, calc((100% - 1120px) / 2));
+}
+
+/* =========================================================
+
+   TIPOGRAFIA
+
+   ========================================================= */
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 800px;
+
+  margin-bottom: var(--espaco-4);
+
+  font-size: var(--fonte-3xl);
+
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: var(--fonte-2xl);
+
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: var(--fonte-xl);
+
+  line-height: 1.25;
+}
+
+.sobretitulo,
+.etiqueta {
+  margin-bottom: var(--espaco-2);
+  color: #bde5cd;
+  font-size: var(--fonte-xs);
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.etiqueta {
+  display: inline-block;
+  padding: var(--espaco-1) var(--espaco-3);
+  border: 1px solid var(--verde);
+  border-radius: 999px;
+  background: var(--verde-claro);
+  color: var(--verde-escuro);
+  letter-spacing: 0.05em;
+}
+
+.pagina-intro p:not(.sobretitulo),
+.hero p:not(.sobretitulo) {
+  max-width: 680px;
+
+  font-size: var(--fonte-lg);
+}
+
+.secao {
+  padding-block: var(--espaco-18);
+}
+
+.fundo-claro {
+  background: #eff7f2;
+}
+
+.cabecalho-secao {
+  max-width: 730px;
+
+  margin-bottom: var(--espaco-8);
+}
+
+.cabecalho-secao .sobretitulo,
+.projeto .etiqueta {
+  color: var(--verde);
+}
+
+.texto-destaque {
+  max-width: 800px;
+
+  font-size: var(--fonte-xl);
+}
+
+/* =========================================================
+
+   GRID DE 12 COLUNAS
+
+   ========================================================= */
+
+/*
+
+   O projeto utiliza uma estrutura de 12 colunas.
+
+   As colunas são distribuídas com:
+
+   repeat(12, minmax(0, 1fr))
+
+   Os elementos filhos utilizam diferentes spans
+
+   para formar os layouts de cada página.
+
+*/
+
+.cartoes,
+.lista-projetos,
+.grade-formulario {
+  display: grid;
+
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+
+  gap: var(--espaco-5);
+}
+
+/* =========================================================
+
+   CARTÕES DA PÁGINA INICIAL
+
+   ========================================================= */
+
+.cartao {
+  grid-column: span 4;
+
+  padding: var(--espaco-6);
+
+  background: var(--branco);
+
+  border: 1px solid var(--borda);
+
+  border-radius: 0.7rem;
+
+  box-shadow: var(--sombra);
+}
+
+/* =========================================================
+
+   PROJETOS
+
+   ========================================================= */
+
+.projeto {
+  grid-column: span 4;
+
+  padding: var(--espaco-6);
+
+  background: var(--branco);
+
+  border: 1px solid var(--borda);
+
+  border-radius: 0.7rem;
+
+  box-shadow: var(--sombra);
+}
+
+.projeto ul {
+  padding-left: var(--espaco-5);
+}
+
+.projeto li + li {
+  margin-top: var(--espaco-2);
+}
+
+/* =========================================================
+
+   ÍCONES
+
+   ========================================================= */
+
+.icone {
+  display: inline-block;
+
+  margin-bottom: var(--espaco-3);
+
+  font-size: 2rem;
+}
+
+/* =========================================================
+   BOTÕES E CHAMADAS
+   ========================================================= */
+
+.chamada {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espaco-6);
+  padding: var(--espaco-8);
+  background: var(--verde-claro);
+  border-radius: 0.7rem;
+}
+
+.botao {
+  display: inline-block;
+  padding: var(--espaco-3) var(--espaco-5);
+  border: 2px solid var(--verde);
+  border-radius: 0.35rem;
+  background: var(--verde);
+  color: var(--branco);
+  font: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+
+  /* Transição suave entre os estados */
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.1s ease;
+}
+
+/* Estado hover */
+.botao:hover {
+  border-color: var(--verde-escuro);
+  background: var(--verde-escuro);
+  box-shadow: var(--sombra);
+}
+
+/* Estado focus */
+.botao:focus-visible {
+  outline: 3px solid #e89b27;
+  outline-offset: 3px;
+}
+
+/* Estado active */
+.botao:active {
+  transform: translateY(1px);
+  box-shadow: none;
+}
+
+/* Estado disabled */
+.botao:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.botao-secundario {
+  flex: 0 0 auto;
+}
+
+/* =========================================================
+
+   RODAPÉ
+
+   ========================================================= */
+
+.rodape {
+  padding-block: var(--espaco-8);
+
+  background: var(--verde-escuro);
+
+  color: #e9f4ed;
+
+  font-size: var(--fonte-sm);
+}
+
+.rodape-conteudo {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: var(--espaco-6);
+}
+
+.rodape .marca,
+.rodape a {
+  color: var(--branco);
+}
+
+.rodape p {
+  margin-bottom: 0;
+}
+
+.rodape address {
+  font-style: normal;
+}
+
+/* =========================================================
+
+   FORMULÁRIO
+
+   ========================================================= */
+
+.formulario-intro {
+  margin-bottom: var(--espaco-6);
+}
+
+.formulario-intro p,
+small {
+  color: var(--muted);
+}
+
+form {
+  max-width: 920px;
+}
+
+fieldset {
+  padding: var(--espaco-5);
+
+  margin: 0 0 var(--espaco-5);
+
+  border: 1px solid var(--borda);
+
+  border-radius: 0.5rem;
+}
+
+legend {
+  padding-inline: var(--espaco-2);
+
+  color: var(--verde-escuro);
+
+  font-weight: 800;
+}
+
+/* =========================
+
+   GRID DO FORMULÁRIO
+
+   ========================= */
+
+.grade-formulario .campo {
+  grid-column: span 6;
+}
+
+.grade-formulario .campo-largo {
+  grid-column: 1 / -1;
+}
+
+.campo {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: var(--espaco-1);
+}
+
+label {
+  font-weight: 700;
+}
+
+input,
+select {
+  width: 100%;
+
+  min-height: 2.7rem;
+
+  padding: var(--espaco-2) var(--espaco-3);
+
+  border: 1px solid #82988a;
+
+  border-radius: 0.3rem;
+
+  background: var(--branco);
+
+  color: var(--texto);
+
+  font: inherit;
+}
+
+/* =========================================================
+   ESTADOS DE VALIDAÇÃO DO FORMULÁRIO
+   ========================================================= */
+
+/* Campo preenchido corretamente */
+input:valid,
+select:valid {
+  border-color: var(--verde);
+}
+
+/* Campo com preenchimento inválido */
+input:invalid:not(:placeholder-shown),
+select:invalid {
+  border-color: #b42318;
+}
+
+/* Campo atualmente selecionado */
+input:focus,
+select:focus {
+  outline: 2px solid #e89b27;
+  outline-offset: 1px;
+}
+
+small {
+  font-weight: normal;
+}
+
+/* =========================================================
+
+   OPÇÕES DO FORMULÁRIO
+
+   ========================================================= */
+
+.opcoes {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: var(--espaco-4);
+}
+
+.opcoes label,
+.campo-checkbox label {
+  font-weight: normal;
+}
+
+.opcoes input,
+.campo-checkbox input {
+  width: auto;
+
+  min-height: auto;
+
+  margin-right: var(--espaco-1);
+}
+
+.campo-checkbox {
+  margin-bottom: var(--espaco-5);
+}
+
+.mensagem-formulario {
+  min-height: 1.6rem;
+
+  margin-top: var(--espaco-4);
+
+  color: var(--verde-escuro);
+
+  font-weight: bold;
+
+  .mensagem-formulario.sucesso {
+    color: var(--verde);
+  }
+
+  .mensagem-formulario.erro {
+    color: #b42318;
+  }
+}
+/* =========================================================
+   ALERTA DE FEEDBACK DO CEP
+   ========================================================= */
+
+.mensagem-cep {
+  min-height: 1.6rem;
+  margin: var(--espaco-2) 0 0;
+  padding: var(--espaco-2) var(--espaco-3);
+  border: 1px solid var(--borda);
+  border-radius: 0.35rem;
+  background: var(--verde-claro);
+  color: var(--verde-escuro);
+  font-size: var(--fonte-sm);
+}
+/* =========================================================
+   TOAST DE FEEDBACK DO FORMULÁRIO
+   ========================================================= */
+
+.mensagem-formulario {
+  position: fixed;
+  right: var(--espaco-6);
+  bottom: var(--espaco-6);
+  z-index: 1000;
+
+  width: min(420px, calc(100% - 2rem));
+  min-height: auto;
+  margin: 0;
+  padding: var(--espaco-4) var(--espaco-5);
+
+  border: 1px solid var(--verde);
+  border-radius: 0.5rem;
+  background: var(--branco);
+  color: var(--verde-escuro);
+  box-shadow: var(--sombra);
+
+  font-weight: bold;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(1rem);
+
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease,
+    transform 0.2s ease;
+}
+
+.mensagem-formulario {
+  min-height: 1.6rem;
+  margin-top: var(--espaco-4);
+  color: var(--verde-escuro);
+  font-weight: bold;
+}
+
+.mensagem-formulario.sucesso {
+  color: var(--verde);
+}
+
+.mensagem-formulario.erro {
+  color: #b42318;
+}
+
+.mensagem-formulario.visivel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* =========================================================
+
+   RESPONSIVIDADE
+
+   ========================================================= */
+
+/* =========================================================
+
+   CENÁRIO 1 — TELAS GRANDES
+
+   Até 1200px
+
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  .container {
+    width: min(100% - 2rem, 1000px);
+  }
+
+  .marca img {
+    width: 420px;
+  }
+
+  .cartao,
+  .projeto {
+    grid-column: span 6;
+  }
+
+  .hero-conteudo {
+    padding-block: var(--espaco-18);
+  }
+}
+
+/* =========================================================
+
+   CENÁRIO 2 — NOTEBOOKS
+
+   Até 992px
+
+   ========================================================= */
+
+@media (max-width: 992px) {
+  .marca img {
+    width: 350px;
+  }
+
+  .cabecalho-conteudo {
+    gap: var(--espaco-4);
+  }
+
+  .cartao,
+  .projeto {
+    grid-column: span 6;
+  }
+
+  .grade-formulario .campo {
+    grid-column: span 6;
+  }
+
+  .pagina-intro .container {
+    padding-block: var(--espaco-12);
+  }
+
+  .secao {
+    padding-block: var(--espaco-16);
+  }
+}
+
+/* =========================================================
+
+   CENÁRIO 3 — TABLETS
+
+   Até 768px
+
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .cabecalho-conteudo {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: var(--espaco-3);
+
+    padding-block: var(--espaco-4);
+  }
+
+  .marca img {
+    width: 300px;
+  }
+
+  .hero-conteudo {
+    padding-block: var(--espaco-16);
+  }
+
+  .cartao,
+  .projeto {
+    grid-column: span 12;
+  }
+
+  .grade-formulario .campo {
+    grid-column: span 12;
+  }
+
+  .chamada {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .rodape-conteudo {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+}
+
+/* =========================================================
+   CENÁRIO 4 — CELULARES
+   Até 576px
+   ========================================================= */
+
+@media (max-width: 576px) {
+  .container {
+    width: min(100% - 1.5rem, 100%);
+  }
+
+  .marca img {
+    width: 250px;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  .hero-conteudo {
+    padding-block: var(--espaco-12);
+  }
+
+  .pagina-intro .container {
+    margin-left: auto;
+    padding-block: var(--espaco-12);
+  }
+
+  .secao {
+    padding-block: var(--espaco-12);
+  }
+
+  .cartao,
+  .projeto {
+    padding: var(--espaco-5);
+  }
+
+  fieldset {
+    padding: var(--espaco-4);
+  }
+
+  .chamada {
+    padding: var(--espaco-6);
+  }
+
+  .botao {
+    width: 100%;
+    text-align: center;
+  }
+
+  .mensagem-formulario {
+    right: 1rem;
+    bottom: 1rem;
+    width: calc(100% - 2rem);
+  }
+}
+
+/* =========================================================
+
+   CENÁRIO 5 — CELULARES PEQUENOS
+
+   Até 400px
+
+   ========================================================= */
+
+@media (max-width: 400px) {
+  .marca img {
+    width: 210px;
+  }
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+.pagina-intro p:not(.sobretitulo),
+.hero p:not(.sobretitulo) {
+  font-size: var(--fonte-base);
+}
+
+.secao {
+  padding-block: var(--espaco-8);
+}
+
+.cartao,
+.projeto {
+  padding: var(--espaco-4);
+}
+
+.opcoes {
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+.chamada {
+  padding: var(--espaco-5);
+}
+
+/* =========================================================
+
+   NAVEGAÇÃO RESPONSIVA
+
+   ========================================================= */
+
+.navegacao {
+  position: relative;
+}
+
+/* =========================
+
+   BOTÃO HAMBÚRGUER
+
+   ========================= */
+
+.menu-toggle {
+  display: none;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: var(--espaco-2);
+
+  padding: var(--espaco-2) var(--espaco-3);
+
+  border: 1px solid var(--borda);
+
+  border-radius: 0.35rem;
+
+  background: var(--branco);
+
+  color: var(--verde-escuro);
+
+  font: inherit;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.menu-toggle:hover {
+  background: var(--verde-claro);
+}
+
+/* =========================
+
+   MENU PRINCIPAL
+
+   ========================= */
+
+.menu {
+  display: flex;
+
+  align-items: center;
+
+  gap: var(--espaco-1);
+
+  padding: 0;
+
+  margin: 0;
+
+  list-style: none;
+}
+
+.menu > li {
+  position: relative;
+}
+
+.menu a,
+.submenu-toggle {
+  display: block;
+
+  padding: var(--espaco-2) var(--espaco-3);
+
+  border: 0;
+
+  border-radius: 0.35rem;
+
+  background: transparent;
+
+  color: var(--verde-escuro);
+
+  font: inherit;
+
+  font-weight: bold;
+
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+.menu a:hover,
+.menu .ativo,
+.submenu-toggle:hover {
+  background: var(--verde-claro);
+}
+
+/* =========================================================
+
+   DROPDOWN
+
+   ========================================================= */
+
+.submenu {
+  position: absolute;
+
+  top: calc(100% + var(--espaco-1));
+
+  left: 0;
+
+  z-index: 20;
+
+  min-width: 220px;
+
+  padding: var(--espaco-2);
+
+  margin: 0;
+
+  background: var(--branco);
+
+  border: 1px solid var(--borda);
+
+  border-radius: 0.5rem;
+
+  box-shadow: var(--sombra);
+
+  list-style: none;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform: translateY(-0.5rem);
+
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* Abre o dropdown com mouse ou teclado */
+
+.item-dropdown:hover > .submenu,
+.item-dropdown:focus-within > .submenu,
+.item-dropdown.submenu-aberto > .submenu {
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: translateY(0);
+}
+
+.submenu a {
+  width: 100%;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+
+   MOBILE
+
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .navegacao {
+    width: 100%;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .menu {
+    display: none;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    width: 100%;
+
+    margin-top: var(--espaco-3);
+
+    gap: var(--espaco-1);
+  }
+
+  .menu.menu-aberto {
+    display: flex;
+  }
+
+  .menu > li {
+    width: 100%;
+  }
+
+  .menu a,
+  .submenu-toggle {
+    width: 100%;
+
+    text-align: left;
+  }
+
+  /* Dropdown no celular */
+
+  .submenu {
+    position: static;
+
+    display: none;
+
+    width: 100%;
+
+    min-width: 0;
+
+    margin-top: var(--espaco-1);
+
+    padding-left: var(--espaco-3);
+
+    border: 0;
+
+    box-shadow: none;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: none;
+  }
+
+  .item-dropdown.submenu-aberto > .submenu {
+    display: block;
+  }
+
+  .submenu a {
+    white-space: normal;
+  }
+}
+
+/* =========================================================
+
+   CELULARES PEQUENOS
+
+   ========================================================= */
+
+@media (max-width: 400px) {
+  .menu {
+    gap: var(--espaco-2);
+  }
+
+  .menu a,
+  .submenu-toggle {
+    padding: var(--espaco-3);
+  }
+}
