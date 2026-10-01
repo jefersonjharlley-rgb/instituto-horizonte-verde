@@ -368,9 +368,6 @@ export function iniciarFormulario() {
             return;
         }
 
-        ultimoCepConsultado =
-            cep;
-
         if (mensagemCep) {
             mensagemCep.textContent =
                 "Buscando endereço...";
@@ -401,6 +398,8 @@ export function iniciarFormulario() {
 
                 return;
             }
+
+            ultimoCepConsultado = cep;
 
             if (campoEndereco) {
                 campoEndereco.value =
