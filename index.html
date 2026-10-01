@@ -22,16 +22,56 @@
         <img src="img/logo-horizonte-verde.png" alt="Logo do Instituto Horizonte Verde">
       </a>
 
-      <nav aria-label="Navegação principal">
-        <ul class="menu">
+      <nav class="navegacao" aria-label="Navegação principal">
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+          <span class="icone-hamburguer" aria-hidden="true">☰</span>
+          <span class="texto-menu">Menu</span>
+        </button>
+
+        <ul id="menu-principal" class="menu">
+
           <li>
-            <a class="ativo" aria-current="page" href="index.html">
-              Início
-            </a>
+            <a href="index.html">Início</a>
           </li>
-          <li><a href="projetos.html">Projetos</a></li>
-          <li><a href="cadastro.html">Participe</a></li>
+
+          <li class="item-dropdown">
+
+            <button class="submenu-toggle" type="button" aria-expanded="false" aria-controls="submenu-projetos">
+              Projetos
+              <span aria-hidden="true">▾</span>
+            </button>
+
+            <ul id="submenu-projetos" class="submenu">
+
+              <li>
+                <a href="projetos.html#sementes">
+                  Sementes do Amanhã
+                </a>
+              </li>
+
+              <li>
+                <a href="projetos.html#praca">
+                  Praça Viva
+                </a>
+              </li>
+
+              <li>
+                <a href="projetos.html#reuso">
+                  Rede de Reuso
+                </a>
+              </li>
+
+            </ul>
+
+          </li>
+
+          <li>
+            <a href="cadastro.html">Participe</a>
+          </li>
+
         </ul>
+
       </nav>
     </div>
   </header>
